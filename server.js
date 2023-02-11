@@ -8,7 +8,7 @@ const requestHandler = (req , res) => {
 
     const chunks = [];
     // Listen and collect req body chunks
-    req.on("data", (chunks) => chunks.push(chunks));
+    req.on("data", (chunk) => chunks.push(chunk));
 
 
     // Handle the response after all the req chunks have arrived
